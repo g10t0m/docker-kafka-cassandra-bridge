@@ -29,7 +29,7 @@ CREATE KEYSPACE kafka
     event_time timestamp,  
     valore text,  
     PRIMARY KEY (topic, event_time) . 
-) WITH CLUSTERING ORDER BY (event_time ASC);  
+) WITH CLUSTERING ORDER BY (event_time DESC);  
 ```
 
 Kafka 1 broker eg: IP 10.0.0.5 port 32777 topic to get data: `topic2put`
