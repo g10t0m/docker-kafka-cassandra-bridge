@@ -9,11 +9,11 @@ In this example, we will use a Cassandra cluster, 3 nodes '10.0.0.1','10.0.0.2',
 
 Cassandra Keyspace kafka, eg:
 
-CREATE KEYSPACE kafka
+`CREATE KEYSPACE kafka
   WITH REPLICATION = { 
    'class' : 'NetworkTopologyStrategy', 
    'dc1' : 3 
-  };
+  };`
   
   use kafka;
   
