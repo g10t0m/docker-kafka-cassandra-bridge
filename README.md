@@ -40,7 +40,7 @@ put files here (Dockerfile and Kafka2Cassandra.py)
 
 `docker run -d --restart-always --name my-k-c k-c`
 
-##Swarm mode
+## Swarm mode
 
 `docker service create --name s-k-c --replicas 1 k-c`
 
