@@ -28,21 +28,21 @@ Kafka 1 broker eg: IP 10.0.0.5 port 32777 topic to get data: topic2put
 
 ## Install
 
-mkdir /opt/k-c
+`mkdir /opt/k-c`
 
-cd /k-c
+`cd /k-c`
 
 put files here (Dockerfile and Kafka2Cassandra.py)
 
-docker build -t k-c .
+`docker build -t k-c .`
 
 ## Run
 
-docker run -d --restart-always --name my-k-c k-c
+`docker run -d --restart-always --name my-k-c k-c`
 
 ##Swarm mode
 
-docker service create --name s-k-c --replicas 1 k-c
+`docker service create --name s-k-c --replicas 1 k-c`
 
 **Note**:
 
