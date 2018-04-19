@@ -36,6 +36,23 @@ Kafka 1 broker eg: IP 10.0.0.5 port 32777 topic to get data: `topic2put`
 
 put files here (Dockerfile and Kafka2Cassandra.py)
 
+Dockerfile:
+
+`FROM python:2
+
+WORKDIR /usr/src/app
+
+
+RUN pip install --upgrade pip
+RUN pip install cassandra-driver
+RUN pip install kafka-python
+
+COPY . .
+
+CMD [ "python", "./Kafka2Cassandra.py" ]`
+
+Build and run the only Python script needed
+
 `docker build -t k-c .`
 
 ## Run
