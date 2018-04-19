@@ -46,6 +46,7 @@ put files here (Dockerfile and Kafka2Cassandra.py)
 
 **Note**:
 
---replicas 1 # i want only one of these in the cluster running
+--replicas 1 
+### i want only one of these in the cluster running
 
 
