@@ -49,6 +49,6 @@ put files here (Dockerfile and Kafka2Cassandra.py)
 **Note**:
 
 --replicas 1 
-### i want only one of these in the cluster running
+### i want only one of these in the cluster running, yet survive loss of docker nodes!
 
 
