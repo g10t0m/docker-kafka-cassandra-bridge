@@ -1,6 +1,8 @@
 # docker kafka 2 cassandra bridge
 A simple yet powerful Kafka 2 Cassandra Bridge
 
+Inspired by https://hub.docker.com/_/python/
+
 ## Requirements
 
 docker installed on linux
