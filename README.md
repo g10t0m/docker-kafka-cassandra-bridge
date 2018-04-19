@@ -23,12 +23,12 @@ CREATE KEYSPACE kafka
  ```
   
  ```
- CREATE TABLE kafka.telemetry (
-    topic text,
-    event_time timestamp,
-    valore text,
-    PRIMARY KEY (topic, event_time)
-) WITH CLUSTERING ORDER BY (event_time ASC);
+ CREATE TABLE kafka.telemetry (  
+    topic text,  
+    event_time timestamp,  
+    valore text,  
+    PRIMARY KEY (topic, event_time) . 
+) WITH CLUSTERING ORDER BY (event_time ASC);  
 ```
 
 Kafka 1 broker eg: IP 10.0.0.5 port 32777 topic to get data: `topic2put`
