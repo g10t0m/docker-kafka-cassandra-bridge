@@ -32,7 +32,7 @@ mkdir /opt/k-c
 
 cd /k-c
 
-put files here (Dockerfile and python)
+put files here (Dockerfile and Kafka2Cassandra.py)
 
 docker build -t k-c .
 
