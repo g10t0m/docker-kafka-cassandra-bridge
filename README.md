@@ -11,20 +11,25 @@ In this example, we will use a Cassandra cluster, 3 nodes '10.0.0.1','10.0.0.2',
 
 Cassandra Keyspace `kafka`, eg:
 
-`CREATE KEYSPACE kafka
+```
+CREATE KEYSPACE kafka
   WITH REPLICATION = { 
    'class' : 'NetworkTopologyStrategy', 
    'dc1' : 3 
   };`
   
- `use kafka;`
+ ``` 
+ use kafka;
+ ```
   
- `CREATE TABLE kafka.telemetry (
+ ```
+ CREATE TABLE kafka.telemetry (
     topic text,
     event_time timestamp,
     valore text,
     PRIMARY KEY (topic, event_time)
-) WITH CLUSTERING ORDER BY (event_time ASC);`
+) WITH CLUSTERING ORDER BY (event_time ASC);
+```
 
 Kafka 1 broker eg: IP 10.0.0.5 port 32777 topic to get data: `topic2put`
 
@@ -38,7 +43,8 @@ put files here (Dockerfile and Kafka2Cassandra.py)
 
 #### Dockerfile
 
-`FROM python:2
+```
+FROM python:2
 
 WORKDIR /usr/src/app
 
@@ -49,11 +55,13 @@ RUN pip install kafka-python
 
 COPY . .
 
-CMD [ "python", "./Kafka2Cassandra.py" ]`
+CMD [ "python", "./Kafka2Cassandra.py" ]
+```
 
 #### Kafka2Cassandra.py
 
-`#!/usr/bin/env python2.7
+```
+#!/usr/bin/env python2.7
 
 #pip install kafka-python
 #pip install cassandra-driver
@@ -71,9 +79,10 @@ for msg in consumer:
         ts = time.time()
         st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
         print (st + ':'+ msg.value)
-        session.execute("insert into kafka.telemetry (topic, event_time,valore) values('topic2put',toTimestamp(now()),'"+msg.value+"') using ttl 20;")`
+        session.execute("insert into kafka.telemetry (topic, event_time,valore) values('topic2put',toTimestamp(now()),'"+msg.value+"') using ttl 20;")
+```
         
-        **Note using ttl 20 will persist data only 20 seconds**
+        ** Note using ttl 20 will persist data only 20 seconds **
 
 Build and run the only Python script needed
 
