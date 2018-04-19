@@ -9,4 +9,4 @@ RUN pip install kafka-python
 
 COPY . .
 
-CMD [ "python", "./br-snscpu.py" ]
+CMD [ "python", "./Kafka2Cassandra.py" ]
