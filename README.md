@@ -1,4 +1,4 @@
-# docker-kafka-cassandra-bridge
+# docker kafka 2 cassandra bridge
 A simple yet powerful Kafka 2 Cassandra Bridge
 
 ## Requirements
