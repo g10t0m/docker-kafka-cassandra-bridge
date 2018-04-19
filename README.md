@@ -7,7 +7,7 @@ docker installed on linux
 
 In this example, we will use a Cassandra cluster, 3 nodes '10.0.0.1','10.0.0.2','10.0.0.3'
 
-Cassandra Keyspace kafka, eg:
+Cassandra Keyspace `kafka`, eg:
 
 `CREATE KEYSPACE kafka
   WITH REPLICATION = { 
@@ -24,7 +24,7 @@ Cassandra Keyspace kafka, eg:
     PRIMARY KEY (topic, event_time)
 ) WITH CLUSTERING ORDER BY (event_time ASC);`
 
-Kafka 1 broker eg: IP 10.0.0.5 port 32777 topic to get data: topic2put
+Kafka 1 broker eg: IP 10.0.0.5 port 32777 topic to get data: `topic2put`
 
 ## Install
 
