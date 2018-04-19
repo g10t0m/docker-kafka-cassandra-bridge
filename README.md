@@ -1,7 +1,7 @@
 # docker-kafka-cassandra-bridge
 A simple yet powerful Kafka 2 Cassandra Bridge
 
-##Requirements
+## Requirements
 
 docker installed on linux
 
@@ -26,7 +26,7 @@ CREATE KEYSPACE kafka
 
 Kafka 1 broker eg: IP 10.0.0.5 port 32777 topic to get data: topic2put
 
-##Install
+## Install
 
 mkdir /opt/k-c
 
@@ -36,7 +36,7 @@ put files here (Dockerfile and python)
 
 docker build -t k-c .
 
-##Run
+## Run
 
 docker run -d --restart-always --name my-k-c k-c
 
